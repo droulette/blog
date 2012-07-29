@@ -12,18 +12,27 @@
  *= require_tree .
 */
 
-
-.login{
-	text-align:right;
-}
-
-
 .clear{
 	clear:both;
 }
-
 
 .center{
 	margin:auto;
 	background-color:red;
 }
+
+.float{
+	float:left;
+	padding-top:5px;
+}
+
+.header{
+	color:red;
+	float:left;
+	margin:10px;
+}
+
+.textright{
+	float:right;
+}
+

@@ -8,26 +8,40 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
-<div class='login well'>
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. Not you?
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
-  <% end %>
+<div class='container well'>	
+
+	<div class='float'>
+		<%= image_tag('rails.png', :alt =>'logo')%>
+	</div>
+
+	<div class='header'<>
+		<h1><em>My Blog</em></h1>
+		<p>World of intrigue</p>
+	</div>
+
+	<div class='login textright'>
+	  <% if user_signed_in? %>
+	    Signed in as <%= current_user.email %>. Not you?
+	    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+	  <% else %>
+	    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
+	  <% end %>
+	</div>
+
 </div>
 
  <div class='clear'></div>
 
-<div class='span6'> 
+<div class='offset1 red'><em>
 	<% flash.each do |name, msg| %>
 	  <%= content_tag :div, msg, :id => "flash_#{name}" %>
 	<% end %>
+</em>
 </div>	
 
 
 <div class='container'>
+</br>
 	<div class='span12'>
 		<% if user_signed_in? %>
 		<ul class='nav nav-tabs'>
