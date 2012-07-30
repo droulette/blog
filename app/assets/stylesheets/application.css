@@ -11,8 +11,8 @@
  *= require_self
  *= require_tree .
 */
-.wide{
-	width:300px;
+.float{
+	float:right;
 }
 
 .clear{

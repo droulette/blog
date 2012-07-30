@@ -1,9 +1,11 @@
 Blog::Application.routes.draw do
-  get "contact_us/index"
+
 
   devise_for :users
 
   resources :posts
+
+  resources :stores
 
   resources :about_us
   

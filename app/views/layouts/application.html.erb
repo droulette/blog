@@ -37,6 +37,12 @@
 		<% end %></em>
 	</div>	
 	
+			
+		<form class='form-search float'>
+			<input type='text' class='input-medium search-query'>
+			<button type='submit' class='btn'>Search</button>
+		</form>
+	
 	
 	<div class='container'>
 		</br>
@@ -53,7 +59,7 @@
 				<li class='dropdown active'>
 					<a href='#' class='dropdown-toggle' data-toggle='dropdown'>My Store<b class='caret'></b></a>				
 					<ul class='dropdown-menu'>
-						<li><%= link_to 'All Items', '#' %></li>
+						<li><%= link_to 'All Items', stores_path %></li>
 						<li><%= link_to 'My Items', '#' %></li>
 						<li><%= link_to 'New Items', '#' %></li>
 					</ul>

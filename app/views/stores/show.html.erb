@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Item:</b>
+  <%= @store.item %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @store.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @store.price %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @store.size %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @store.quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>
