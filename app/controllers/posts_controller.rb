@@ -26,7 +26,6 @@ before_filter :authenticate_user!
   # GET /posts/new.json
   def new
     @post = Post.new
-    @current = current_user.email
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
@@ -41,8 +40,7 @@ before_filter :authenticate_user!
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
-
+    @post = current_user.posts.build(params[:post])
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
